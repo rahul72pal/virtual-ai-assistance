@@ -105,13 +105,13 @@ const Agent = ({
     //   }
     // };
 
-    // if (callStatus === CallStatus.FINISHED) {
-    //   if (type === "generate") {
-    //     router.push("/");
-    //   } else {
-    //     handleGenerateFeedback(messages);
-    //   }
-    // }
+    if (callStatus === CallStatus.FINISHED) {
+      if (type === "generate") {
+        router.push("/");
+      } else {
+        // handleGenerateFeedback(messages);
+      }
+    }
   }, [messages, callStatus, feedbackId, interviewId, router, type, userId]);
 
   const handleCall = async () => {
